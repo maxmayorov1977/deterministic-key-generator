@@ -1,6 +1,5 @@
 # deterministic-key-generator
 
-<<<<<<< HEAD
 nodejs, mongodb(optional? by default disabled), if not necessary, set 0 in config
 
 git clone project
@@ -27,6 +26,3 @@ x-www-form-urlencoded
 id: value
 
 return address
-=======
-npm i
->>>>>>> cf3b68c831cf7f0d2ab0da39ec5e2049cc567acc
