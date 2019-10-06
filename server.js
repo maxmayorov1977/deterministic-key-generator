@@ -9,8 +9,12 @@ fs = require('fs');
 app.use((req, res, next) => {
     var ipaddr = req.connection.remoteAddress.split(':')
     var date = Math.floor(new Date() / 1000)
-    const request = {date: date, ipaddr: ipaddr[3]}
-    mongo.insert(request)
+    const request = {
+      date: date, ipaddr: ipaddr[3]
+    }
+    if (config.MONGO.USE == 1){
+      mongo.insert(request)
+    }
     next()
 })
 
@@ -51,14 +55,6 @@ app.get("/bitcoinWallet", (req, res) => {
                 message: 'something went wrong'
             })
         }
-    })
-})
-
-app.get("/test", (req, res) => {
-    answer = crypto.test(req.body.id)
-    res.json({
-        result: "ok",
-        wallet: answer
     })
 })
 

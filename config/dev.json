@@ -4,6 +4,7 @@
         "PORT": 5421
     },
     "MONGO": {
+        "USE": "0",
         "URL": "mongodb://localhost:27017"
     }
 }
