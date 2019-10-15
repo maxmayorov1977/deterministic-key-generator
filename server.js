@@ -1,5 +1,5 @@
 var config = require('./config/dev.json')
-const port = process.env.PORT || 5421;
+const port = process.env.PORT || config.API.PORT;
 const express = require('express')
 const app = express()
 app.use(express.urlencoded())
