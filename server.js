@@ -1,4 +1,5 @@
 var config = require('./config/dev.json')
+const port = process.env.PORT || 5421;
 const express = require('express')
 const app = express()
 app.use(express.urlencoded())
@@ -63,9 +64,9 @@ app.use((err, req, res, next) => {
     res.status(500).send("Something broke!")
 })
 
-app.listen(config.API.PORT, (err) => {
+app.listen(port, (err) => {
     if (err) {
         return console.log('something bad happened', err)
     }
-    console.log(`server is listening on ${config.API.PORT}`)
+    console.log(`server is listening on ${port}`)
 })
