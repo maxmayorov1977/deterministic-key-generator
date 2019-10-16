@@ -1,4 +1,4 @@
-var config = require('./config/dev.json')
+var config = require('./config/app.json')
 const mongo = require('mongodb').MongoClient
 
 module.exports = {
