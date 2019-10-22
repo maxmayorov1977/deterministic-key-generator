@@ -1,1 +1,4 @@
-node_modules
+app/node_modules
+app/config/app.json
+node.env
+!node.env.example
