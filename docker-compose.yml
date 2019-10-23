@@ -1,25 +1,21 @@
 version: "3.7"
 services:
-  node:
-    build: node
+  nodejs:
+    build: .
     image: node:12.12.0-alpine-self
-    container_name: node
+    container_name: nodejs-deterministic-key-gen
     ports:
       - 5421:5421
-    working_dir: /usr/app
-    volumes:
-      - /home/user/repos/deterministic-key-generator:/usr/app
     env_file:
       node.env
-    #command: npm install
     restart: always
     depends_on:
       - mongo
   mongo:
     image: mongo:4.0.13-xenial
-    container_name: mongo
+    container_name: mongo-deterministic-key-gen
     ports:
       - 27017:27017
     volumes:
-      - /home/user/docker-compose/node-8.16.2-alpine-mongo-4.0.13-xenial/mongo/db:/data/db
+      - /home/user/repos/deterministic-key-generator/mongo/db:/data/db
     restart: always

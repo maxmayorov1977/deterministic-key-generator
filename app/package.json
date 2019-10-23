@@ -1,8 +1,12 @@
 {
   "name": "wallet-gen",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "the software generates a wallet address from the seed of your bitcoin wallet",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxmayorov1977/deterministic-key-generator.git"
+},
   "scripts": {
     "start": "node server.js",
     "test": "npm run unit"

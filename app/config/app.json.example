@@ -1,7 +1,7 @@
 {
     "API": {
-        "TOKEN": "9i7RRNOWUWyWHAv2GB8KWca6qCvxHxTXNESMJzsFlMojtx9ZN98HNqyUv4bSZJfB908LP8ipTNNNNkIHgCHunLbybDyc062nwqkxB68EwzH60OhZxS390dYFv3BpJYHq",
-        "PORT": 5421
+        "TOKEN": "SOME_TOKEN",
+        "PORT": 
     },
     "MONGO": {
         "USE": "1",
