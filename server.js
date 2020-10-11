@@ -1,11 +1,12 @@
-var config = require('./config/app.json')
+const config = require('./config/app.json')
 const port = process.env.PORT || config.API.PORT;
-const express = require('express')
-const app = express()
-app.use(express.urlencoded())
+fs = require('fs');
 const mongo = require('./mongo')
 const crypto = require('./crypto')
-fs = require('fs');
+const express = require('express')
+const app = express()
+
+app.use(express.urlencoded())
 
 app.use((req, res, next) => {
     var ipaddr = req.connection.remoteAddress.split(':')
